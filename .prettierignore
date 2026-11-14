@@ -1,0 +1,12 @@
+# Package managers
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Generated
+/.svelte-kit
+/build
+src/lib/viewer/pkg/
+
+# Static assets
+/static/

@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-cloud-50: #f3f9fb;
+  --color-cloud-100: #e4f1f5;
+  --color-cloud-200: #c9e4eb;
+  --color-cloud-300: #b0d5df;
+  --color-cloud-400: #91c0d2;
+  --color-cloud-500: #6e9aa9;
+  --color-cloud-600: #5a838d;
+  --color-cloud-700: #486a73;
+  --color-cloud-800: #37525a;
+  --color-cloud-900: #273c42;
+  --color-cloud-950: #18262a;
+
+  --font-sans: 'Noto Sans TC', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Anta', 'Noto Sans TC', ui-sans-serif, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply min-h-dvh bg-cloud-100 font-sans text-cloud-950 antialiased;
+  }
+
+  ::selection {
+    @apply bg-cloud-400 text-cloud-950;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-cloud-600;
+  }
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
